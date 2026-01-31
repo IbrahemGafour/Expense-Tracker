@@ -1,0 +1,174 @@
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+ body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('istockphoto-1203432728-170667a.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background-color: #218838;
+}
+#expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+#expense-list li {
+    background-color: #f8f9fa;
+    font-size: 22px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#total-expense {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 22px;
+}
+section {
+    margin-top: 20px;
+}
+section h3 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+#transactionList {
+    list-style-type: none;
+    padding: 0;
+}
+#transactionList li {
+    background-color: #e9ecef;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#transactionList li:nth-child(odd) {
+    background-color: #dee2e6;
+}
+#transactionList li::before {
+    content: '•';
+    color: #28a745;
+    margin-right: 8px;
+}
+#transactionList li.expense::before {
+    color: #dc3545;
+}
+#transactionList[data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: #6c757d;
+    font-style: italic;
+}
+ul:empty::before {
+  content: attr(data-placeholder);
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  height: 200px;
+  overflow-y: auto;
+}
+
+ul:empty {
+  border: 2px dashed #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul:empty::before {
+  content: attr(data-placeholder);
+}
+ul li:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+.expense-item {
+  flex: 1;
+}
+
+.expense-item h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.expense-item p {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.action{
+    position: initial;
+    top: 0;
+    right: 0;
+    color: #e9ecef;
+    height: 100%;
+    width: 50px;
+    display: grid;
+place-items: center;
+transform: scaleX(0);
+transition: transform all 300ms;
+
+
+}
+ul li:hover .action{
+    transform: scaleX(1);
+    transition: transform 0.3s ease-in-out;
+}
+.action svg {
+  width: 36px;
+  height: 36px;
+  fill: #e21919;
+  cursor: pointer;
+  transition: fill 0.2s;
+width: 50px;
+
+}
